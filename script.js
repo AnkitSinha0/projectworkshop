@@ -37,4 +37,44 @@ window.addEventListener("load", () => {
     ease: "power3.out",
     delay: 1.1
   });
+
+  
 });
+
+const video = document.getElementById('iphoneVideo');
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
+  },
+  {
+    root: null, 
+    threshold: 0.5, 
+  }
+);
+
+observer.observe(video);
+  const menuBtn = document.getElementById('menu-btn');
+  const closeBtn = document.getElementById('close-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+
+  function toggleMenu() {
+    mobileMenu.classList.toggle('right-0');
+    mobileMenu.classList.toggle('right-[-100%]');
+  }
+
+  menuBtn.addEventListener('click', toggleMenu);
+  closeBtn.addEventListener('click', toggleMenu);
+
+  // Close menu when any link is clicked
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', toggleMenu);
+  });
+
