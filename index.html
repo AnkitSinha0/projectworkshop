@@ -37,7 +37,7 @@ body{
 </head>
 <body class="bg-black text-white">
 
-<nav class="w-full fixed top-0 left-0 z-50 bg-black/70 p-6 flex justify-between items-center">
+<nav id="navbar" class="w-full fixed top-0 left-0 z-50 bg-black/70 p-6 flex justify-between items-center">
   <h1 class="text-2xl font-bold text-white"><i class="fa-brands fa-apple text-3xl"></i></h1>
 
   <button id="menu-btn" class="md:hidden text-white focus:outline-none">
@@ -117,16 +117,7 @@ body{
     </p>
   </div>
 </section>
-<div class="scrolling-text overflow-hidden whitespace-nowrap bg-black py-4">
-  <div class="rail flex gap-12">
-    <h4 class="text-2xl font-bold">Animate Anything...</h4>
-    <h4 class="text-2xl font-bold">Delivering silky-smooth performance</h4>
-    <h4 class="text-2xl font-bold">so you can focus on the fun stuff.</h4>
-    <h4 class="text-2xl font-bold">Animate Anything...</h4>
-    <h4 class="text-2xl font-bold">Delivering silky-smooth performance</h4>
-    <h4 class="text-2xl font-bold">so you can focus on the fun stuff.</h4>
-  </div>
-</div>
+
 
 
 
@@ -197,9 +188,39 @@ body{
 
 
 
-  <footer class="w-full bg-black text-slate-400 text-center py-6">
-    <p>© 2025 Apple Inc. All rights reserved.</p>
-  </footer>
+<footer class="bg-black text-gray-300 py-12">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col items-center md:flex-row md:justify-between gap-8 text-center md:text-left">
+
+    <div class="flex flex-col space-y-2">
+      <h4 class="text-white font-semibold">Apple</h4>
+      <a href="#">Mac</a>
+      <a href="#">iPad</a>
+      <a href="#">iPhone</a>
+      <a href="#">Watch</a>
+    </div>
+
+    <div class="flex flex-col space-y-2">
+      <h4 class="text-white font-semibold">Shop & Learn</h4>
+      <a href="#">Store</a>
+      <a href="#">AirPods</a>
+      <a href="#">TV & Home</a>
+      <a href="#">Entertainment</a>
+    </div>
+
+    <div class="flex flex-col space-y-2">
+      <h4 class="text-white font-semibold">Support</h4>
+      <a href="#">Help Center</a>
+      <a href="#">Warranty</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+  </div>
+
+  <div class="text-center text-gray-500 text-sm mt-10 pt-12">
+    <a appRouter="/flower">&copy; 2025 Apple Inc. All rights reserved.</a>
+  </div>
+</footer>
+
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="script.js" defer></script>
 </body>

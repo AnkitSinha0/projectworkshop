@@ -73,7 +73,6 @@ observer.observe(video);
   menuBtn.addEventListener('click', toggleMenu);
   closeBtn.addEventListener('click', toggleMenu);
 
-  // Close menu when any link is clicked
   mobileLinks.forEach(link => {
     link.addEventListener('click', toggleMenu);
   });
